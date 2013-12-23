@@ -3,19 +3,25 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 
 
-public class Module {
+public abstract class Module {
 	private Position position;
 	private int hit_points; //wrecked
 	private int structure_points; //annihilated
 	private int mass;
 	private String filename; //lolcat.jpg
 	private Image image;
-		
-	public Module(Position position,  int hit_points, int structure_points, int mass, String filename){
+	private int moduleType;
+	
+	public Module(Position position,  int hit_points, int structure_points, int mass, int moduleType, String filename){
 		this.position=position;
 		this.hit_points=hit_points;
 		this.structure_points=structure_points;
 		this.filename=filename;
+		this.moduleType=moduleType; 
+	}
+	
+	public int getType(){
+		return moduleType;
 	}
 	
 	public Position getPosition(){
