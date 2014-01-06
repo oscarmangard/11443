@@ -15,39 +15,21 @@ import javax.swing.Timer;
 
 public class LocalSpace extends JPanel implements ActionListener {
 
-    private Timer timer;
     private SpaceCraft[] ships;
     
     
     public LocalSpace() {
 
-        addKeyListener(new TAdapter());
-        setFocusable(true);
-        setBackground(Color.DARK_GRAY);
-        setDoubleBuffered(true);
-
-        
-
-        timer = new Timer(10, this);
-        timer.start();
     }
 
 
-    public void paint(Graphics g, int shipnumber) {
-        super.paint(g);
-
-        Graphics2D g2d = (Graphics2D)g;
-        g2d.drawImage(ships[shipnumber].modules[0][0].getImage(), ships[shipnumber].getX(), ships[shipnumber].getY(), this);
-        //ritar bara modul #1 just nu
-        Toolkit.getDefaultToolkit().sync();
-        g.dispose();
-        
+    public void paintShip(int shipnumber) {
+   
     }
 
 
     public void actionPerformed(ActionEvent e) {
-       // craft.move();
-        repaint();  
+ 
     }
 
 

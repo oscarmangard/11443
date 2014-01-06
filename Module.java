@@ -27,6 +27,9 @@ public abstract class Module {
 	public Position getPosition(){
 		return position;
 	}
+	public void setPosition(Position position){
+		this.position= position;
+	}
 	
 	public int getHit_points(){
 		return this.hit_points;
